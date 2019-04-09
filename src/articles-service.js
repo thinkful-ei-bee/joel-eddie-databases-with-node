@@ -1,6 +1,6 @@
 const ArticlesService = {
-  getAllArticles() {
-    return 'all the articles!!'
+  getAllArticles(knex) {
+    return knex.select('*').from('blogful_articles')
   }
 }
 
