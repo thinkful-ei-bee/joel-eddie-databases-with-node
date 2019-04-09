@@ -1,0 +1,22 @@
+INSERT INTO blogful_articles (title, content, date_published)
+VALUES
+    ('Fish tricks', 'Blah blah blah', now() - '21 days'::INTERVAL),
+    ('Not Dogs', 'Blah blah blah', now() - '21 days'::INTERVAL),
+    ('Bluffalo Wings', 'Blah blah blah', now() - '21 days'::INTERVAL),
+    ('SubstiTuna Salad', 'Blah blah blah', now() - '21 days'::INTERVAL),
+    ('Tofurkey', 'Blah blah blah', now() - '21 days'::INTERVAL),
+    ('Pretenderloins', 'Blah blah blah', now() - '9 days'::INTERVAL),
+    ('Steak-believe', 'Blah blah blah', now() - '9 days'::INTERVAL),
+    ('Kale Seitan', 'Blah blah blah', now() - '9 days'::INTERVAL),
+    ('NoBull Burger', 'Blah blah blah', now() - '9 days'::INTERVAL),
+    ('Turnip the Beet', 'Blah blah blah', now() - '9 days'::INTERVAL),
+    ('Mascarphony', 'Blah blah blah', now() - '7 days'::INTERVAL),
+    ('Burgatory', 'Blah blah blah', now() - '7 days'::INTERVAL),
+    ('Sleight of Ham', 'Blah blah blah', now() - '5 days'::INTERVAL),
+    ('Antichovies', 'Blah blah blah', now() - '5 days'::INTERVAL),
+    ('Lettuce B. Frank', 'Blah blah blah', now() - '5 days'::INTERVAL),
+    ('Pepperphony', 'Blah blah blah', now() - '5 days'::INTERVAL),
+    ('Shamburger', 'Blah blah blah', now() - '4 days'::INTERVAL),
+    ('Facon', 'Blah blah blah', now() - '4 days'::INTERVAL),
+    ('Salami-get-this-straight', 'Blah blah blah', now() - '4 days'::INTERVAL),
+    ('Mi-steak', 'Blah blah blah', now() - '3 days'::INTERVAL);
