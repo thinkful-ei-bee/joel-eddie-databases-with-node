@@ -91,10 +91,11 @@ describe(`Shopping-list service object`, function() {
         item_name: 'updated title',
         item_price: '10.05',
         item_date_added: new Date(),
-        content: 'updated content',
+        item_checked: true,
+        item_category: 'Main',
       }
-      return ShoppingListService.updateItem(db, idOfItemToUpdate, newItemData)
-        .then(() => ArticlesService.getById(db, idOfItemToUpdate))
+      return ShoppingListService.updateById(db, idOfItemToUpdate, newItemData)
+        .then(() => ShoppingListService.getById(db, idOfItemToUpdate))
         .then(item => {
           expect(item).to.eql({
             id: idOfItemToUpdate,
@@ -107,21 +108,21 @@ describe(`Shopping-list service object`, function() {
 
   context(`Given 'shopping_list' has no data`, () => {
     it(`getAllItems() resolves an empty array`, () => {
-      return ArticlesService.getAllItems(db)
+      return ShoppingListService.getAllItems(db)
         .then(actual => {
           expect(actual).to.eql([])
         })
     })
 
     it(`insertItem() inserts an item and resolves the item with an 'id'`, () => {
-      const newArticle = {
+      const newItem = {
         item_name: 'New shopping list item!',
         item_price: '1.05',
         item_date_added: new Date(),
         item_checked: false,
         item_category: 'Snack'
       }
-      return ShoppingListService.insertItem(db, newArticle)
+      return ShoppingListService.insertItem(db, newItem)
        .then(actual => {
           expect(actual).to.eql({
             id: 1,
